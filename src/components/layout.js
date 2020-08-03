@@ -9,6 +9,10 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
+import {SocialIcon} from 'react-social-icons'
+import {Link} from 'gatsby'
+import colors from './colors'
+
 import Header from "./header"
 import "./layout.css"
 
@@ -35,9 +39,20 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
         <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <Link to="/contact"
+          style={{
+            color: colors.olive,
+            textDecoration: 'none',
+          }}
+          >Contact</Link>  
+          <SocialIcon url="https://facebook.com" 
+          fgColor={colors.olive} 
+          bgColor="transparent" 
+          style={{border:`2px solid ${colors.olive}`, borderRadius:'100%', height:'30px', width:'30px'}} /> 
+          <SocialIcon url="https://instagram.com"
+          fgColor={colors.olive} 
+          bgColor="transparent" 
+          style={{border:`2px solid ${colors.olive}`, borderRadius:'100%', height:'30px', width:'30px'}}/>
         </footer>
       </div>
     </>

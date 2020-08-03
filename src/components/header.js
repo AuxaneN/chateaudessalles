@@ -14,6 +14,8 @@ const LinksWrapper = styled.div`
   max-width:960px;
   margin:0px auto;
   padding:20px 0px;
+
+  font-weight: 500;
 `
 const Dropdown = styled.div`
   position:relative;
@@ -52,7 +54,7 @@ const Dropdown = styled.div`
     transform:rotate(45deg);
     display:inline-block;
   }
-  .current::after{{
+  .current::after{
     border-color:${colors.text}
   }
 `

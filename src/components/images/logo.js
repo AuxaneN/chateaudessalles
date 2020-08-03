@@ -8,7 +8,7 @@ const Logo = () => {
       placeholderImage: file(relativePath: { eq: "CDS_logo.png" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }

@@ -68,7 +68,6 @@ const Header = ({ siteTitle }) => (
   <header
     style={{
       background: colors.beige,
-      marginBottom: `1.45rem`,
     }}
   >
     <div style={{width:`300px`, margin:'auto', padding:'10px',boxSizing:'content-box'}}>

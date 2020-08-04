@@ -2,16 +2,29 @@ import React, {useState} from 'react'
 import Carousel, { Dots, slidesToShowPlugin } from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 
-const WACarousel = ({images, thumbnails})=> {
-  const [value, setValue] = useState(0);
+import styled from 'styled-components';
 
+const CarouselWrapper = styled(Carousel)`
+  button.BrainhubCarousel__arrows.BrainhubCarousel__arrowRight{
+    background-color:#77686830;
+    position:absolute;
+    right:0;
+  }
+  button.BrainhubCarousel__arrows.BrainhubCarousel__arrowLeft{
+    background-color:#77686830;
+    position:absolute;
+    left:0;
+    z-index:99;
+  }
+`
+const SlideShow = ({images, thumbnails})=> {
+  const [value, setValue] = useState(0);
   const onChange = value => {
   setValue(value);
   }
-
   return (
     <div>
-      <Carousel
+      <CarouselWrapper
         value={value}
         onChange={onChange}
         plugins={[
@@ -21,19 +34,19 @@ const WACarousel = ({images, thumbnails})=> {
              numberOfSlides: 1
             }
           },
-          'arrows',
         ]}
+        arrows
+        centered
       >
-      {images}
-      </Carousel>
+       {images}
+      </CarouselWrapper>
       <Dots
-        value={this.state.value}
-        onChange={this.onChange}
+        value={value}
+        onChange={onChange}
         thumbnails={thumbnails}
       />
     </div>
   );
-
 }
 
-export default WACarousel;
+export default SlideShow;

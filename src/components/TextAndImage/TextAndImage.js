@@ -1,11 +1,11 @@
 import React from 'react'
 
 import styled from 'styled-components'
-import colors from '../colors'
+// import colors from '../colors'
 
 const TextAndImageWrapper = styled.div`
 display:flex;
-flex-direction: ${props => props.reversed ? 'reverse-row' : 'row'};
+flex-direction: ${props => props.reversed ? 'row-reverse' : 'row'};
 justify-content:space-between;
 align-items: flex-end;
 
@@ -17,13 +17,14 @@ width:100vw;
 margin:40px auto;
   .text{ 
     position:absolute;
-    right:15vw;
+    ${props => props.reversed ? 'left:15vw;' : 'right:15vw;'};
     bottom:50px;
 
-    width:45vw;
+    width:700px;
     padding:40px;
-    background-color:#eee7ddd4;
+    background-color: #eee7ddd4;
 
+    text-align:justify;
     z-index: 99;
   }
   .image{ 
@@ -45,9 +46,9 @@ margin:40px auto;
 
 `
 const TextAndImage = ({text, image, reversed}) => (
-  <TextAndImageWrapper>
+  <TextAndImageWrapper reversed={reversed}>
     <div className="text">
-      {text}
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{text}
     </div>
     <div className="image">
       {image}

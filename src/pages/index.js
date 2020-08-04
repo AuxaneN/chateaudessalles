@@ -6,9 +6,11 @@ import SEO from "../components/seo"
 
 import Accueil1 from '../components/images/Accueil/Accueil1'
 import Accueil2 from '../components/images/Accueil/Accueil2'
+import Accueil3 from '../components/images/Accueil/Accueil3'
+import Accueil4 from '../components/images/Accueil/Accueil4'
 import TextAndImage from "../components/TextAndImage/TextAndImage"
 
-const text = `Le domaine actuel, formé de la bastide, de la chapelle, du parc et des terres
+const text1 = `Le domaine actuel, formé de la bastide, de la chapelle, du parc et des terres
 agricoles, fut constitué progressivement. Le nom de Salles provient du latin sala qui
 signifie « résidence ». A travers l’histoire, ce domaine a été la résidence principale
 ou secondaire de prieurs, de nobles et de bourgeois. Le quartier a été habité de
@@ -22,6 +24,28 @@ ville de Rome à l’axe du Rhône. Selon certains historiens, les Salles auraie
 mutatio, c’est-à-dire une halte permettant aux agents de la poste impériale romaine
 de changer de monture et d’abreuver leurs chevaux.`
 
+const text2 = `Au Moyen-Âge, les terres du domaine des Salles ont ensuite
+été mises en valeur par les moines établis au monastère de Saint-
+Hermentaire de Draguignan, bâti au Ve siècle par l’abbaye de
+Lérins. A partir du XIe siècle, le domaine des Salles fut exploité par
+les prieurs de l’Abbaye de Saint-Pons de Nice qui y bâtirent une
+chapelle rurale de style roman, appelée Notre-Dame des Salles. La
+constitution d’un canal pour l’irrigation des parcelles a permis de
+faire des Salles un domaine agricole.`
+
+const text3 = `
+A l’époque moderne, la famille Rasque de Laval acheta une grande
+partie du domaine des Salles et engagea la construction d’une bastide
+provençale, probablement dès le XVIe siècle. L’ensemble fut embelli
+par François-Marie Rasque de Laval (1743-1819), maire de Draguignan
+au moment de la Révolution. Ce dernier choisit d’ailleurs d’être
+enterré à la chapelle de Notre-Dame des Salles. Par alliance et par
+succession, la propriété des Salles devait passer ensuite de propriétaires
+en propriétaires. A chaque famille, son siècle : la famille Truc de la
+Valère au XIXe siècle, la famille Cantilhion de Lacouture au XXe siècle
+et la famille Rhodius au XXIe siècle.
+`
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
@@ -34,7 +58,9 @@ const IndexPage = () => (
       à travers l'histoire de la Provence.
       </h2>
     </div>
-    <TextAndImage text={text} image={<Accueil2 />}/>
+    <TextAndImage text={text1} image={<Accueil2 />}/>
+    <TextAndImage text={text2} image={<Accueil3 />} reversed />
+    <TextAndImage text={text3} image={<Accueil4 />} />
   </Layout>
 )
 export default IndexPage

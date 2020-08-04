@@ -7,7 +7,7 @@ const Accueil4 = () => {
     query {
       placeholderImage: file(relativePath: { eq: "Accueil/accueil4.jpg" }) {
         childImageSharp {
-          fluid(quality: 60, maxWidth:600) {
+          fluid(quality: 60, maxWidth:700) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }

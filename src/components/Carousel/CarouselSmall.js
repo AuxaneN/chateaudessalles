@@ -7,18 +7,18 @@ import styled from 'styled-components';
 const CarouselWrapper = styled(Carousel)`
 
   position: relative;
-  width:500px;
+  width:650px;
   height:500px;
 
   
   button.BrainhubCarousel__arrows.BrainhubCarousel__arrowRight{
     background-color:#77686830;
-    /* position:absolute; */
+    position:absolute;
     right:0;
   }
   button.BrainhubCarousel__arrows.BrainhubCarousel__arrowLeft{
     background-color:#77686830;
-    /* position:absolute; */
+    position:absolute;
     left:0;
     z-index:99;
   }
@@ -44,8 +44,8 @@ const SlideShow = ({images, thumbnails})=> {
         ]}
         arrows
         centered
-        itemWidth={700}
-        offset={40}
+        itemWidth={900}
+        offset={0}
       >
        {images}
       </CarouselWrapper>

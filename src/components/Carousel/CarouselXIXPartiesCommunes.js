@@ -18,7 +18,7 @@ const PartiesCommunesCarousel = () => {
               id
               name
               childImageSharp {
-                fluid(quality:90, maxWidth: 1400) {
+                fluid(quality:100, maxWidth: 1500) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }
@@ -48,9 +48,11 @@ const PartiesCommunesCarousel = () => {
      `
   )
   return (
+    <div style={{width:'max-content', margin:'40px auto'}}>
+    <h4>Les parties communes</h4>
       <SlideShow images={allFile.mainImages.edges.map((image, index) => (
             <Img
-            style={{ maxWidth: '1400px',width:'1400px', height:'auto'}}
+            style={{ maxWidth: '1500px',width:'1500px', height:'auto'}}
             key={index}
               fluid={image.node.childImageSharp.fluid}
             />
@@ -62,6 +64,7 @@ const PartiesCommunesCarousel = () => {
           />
       ))}
       />
+      </div>
   );
 
   

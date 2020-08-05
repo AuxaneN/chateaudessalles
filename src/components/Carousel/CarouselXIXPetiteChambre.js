@@ -50,10 +50,10 @@ const PetiteChambreCarousel= () => {
   )
   return (
     <div className="carrousel">
-      <h3>Petite Chambre - Lit Double</h3>
+      <h4>Petite Chambre - Lits Jumeaux</h4>
       <SlideShow images={allFile.mainImages.edges.map((image, index) => (
             <Img
-            style={{maxWidth:'1900px', width:'600px', height:'auto', maxHeight:'637px'}}
+            style={{maxWidth:'1900px', width:'700px', height:'auto'}}
             key={index}
               fluid={image.node.childImageSharp.fluid}
             />

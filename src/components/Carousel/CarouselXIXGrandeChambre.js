@@ -19,7 +19,7 @@ const GrandeChambreCarousel= () => {
               id
               name
               childImageSharp {
-                fluid(maxWidth: 1900) {
+                fluid(maxWidth: 1000) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }
@@ -50,10 +50,10 @@ const GrandeChambreCarousel= () => {
   )
   return (
     <div className="carrousel">
-      <h3>Grand Chambre - Lit Double</h3>
+      <h4>Grand Chambre - Lit Double</h4>
       <SlideShow images={allFile.mainImages.edges.map((image, index) => (
             <Img
-            style={{width:'600px', height:'auto', maxHeight:'700px'}}
+            style={{width:'700px', height:'auto'}}
             key={index}
               fluid={image.node.childImageSharp.fluid}
             />

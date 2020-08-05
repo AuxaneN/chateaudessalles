@@ -6,7 +6,7 @@ const SubTitleWrapper = styled.div`
 
 width:max-content;
 height: 60px;
-margin:40px 0px;
+margin:60px 0px;
 
 background-color: ${colors.beige};
 color: ${colors.olive};

@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import styled from 'styled-components'
 import Logo from '../components/images/logo'
+import { navigate } from '@reach/router';
 
 import colors from '../components/colors'
 
@@ -64,7 +65,14 @@ const linkStyle = {
   color: colors.olive,
   textDecoration: 'none',
 }
-
+const nav = (e) => {
+  e.preventDefault();
+  navigate(`/hebergements#gite`);
+}
+const navChambres = (e) => {
+  e.preventDefault();
+  navigate(`/hebergements#chambres`);
+}
 const Header = ({ siteTitle }) => (
   <header
     style={{
@@ -92,12 +100,12 @@ const Header = ({ siteTitle }) => (
             Hébergements
           </Link>
           <div className="dropdown_elements">
-              <Link to="/hebergements#chambres" style={linkStyle}>
+              <a href="/hebergements#chambres" onClick={navChambres} style={linkStyle}>
               Les chambres d’hôte
-              </Link>
-              <Link to="/hebergements#gite" style={linkStyle}>
+              </a>
+              <a href="/hebergements#gite" onClick={nav} style={linkStyle}>
                 Le gîte
-              </Link>
+              </a>
           </div>
       </Dropdown>
       <Link 

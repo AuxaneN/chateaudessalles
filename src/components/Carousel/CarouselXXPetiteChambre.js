@@ -4,14 +4,14 @@ import Img from "gatsby-image"
 import SlideShow from './CarouselSmall'
 import TarifsNuit from '../Tarifs/TarifsNuit'
 
-const GrandeChambreCarousel= () => {
+const XXPetiteChambreCarousel= () => {
   const allFile = useStaticQuery(
     graphql`
       query {
         mainImages: allFile(
           filter: {
             extension: { regex: "/(jpg)|(png)|(jpeg)/" }
-            relativeDirectory: { eq: "Hebergement/XIX/Grande_chambre" }
+            relativeDirectory: { eq: "Hebergement/XX/Petite_chambre" }
           }
         ) {
           edges {
@@ -19,7 +19,7 @@ const GrandeChambreCarousel= () => {
               id
               name
               childImageSharp {
-                fluid(maxWidth: 1000) {
+                fluid(maxWidth: 1900) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }
@@ -29,7 +29,7 @@ const GrandeChambreCarousel= () => {
         thumbnailImages: allFile(
           filter: {
             extension: { regex: "/(jpg)|(png)|(jpeg)/" }
-            relativeDirectory: { eq: "Hebergement/XIX/Grande_chambre" }
+            relativeDirectory: { eq: "Hebergement/XX/Petite_chambre" }
           }
         ) {
           edges {
@@ -50,10 +50,10 @@ const GrandeChambreCarousel= () => {
   )
   return (
     <div className="carrousel">
-      <h4>Grand Chambre - Lit Double</h4>
+      <h4>Petite Chambre - Lits Jumeaux</h4>
       <SlideShow images={allFile.mainImages.edges.map((image, index) => (
             <Img
-            style={{width:'800px', height:'auto'}}
+            style={{maxWidth:'1900px', width:'800px', height:'auto'}}
             key={index}
               fluid={image.node.childImageSharp.fluid}
             />
@@ -65,11 +65,11 @@ const GrandeChambreCarousel= () => {
           />
       ))}
       />
-      <TarifsNuit prix="140€"/>
-    </div>
+      <TarifsNuit prix="110€"/>
+  </div>
   );
 
   
 }
 
-export default GrandeChambreCarousel;
+export default XXPetiteChambreCarousel;

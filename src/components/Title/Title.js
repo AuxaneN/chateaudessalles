@@ -28,8 +28,8 @@ align-items:center;
   
 `
 
-const Title = ({title}) => (
-  <TitleWrapper>
+const Title = ({title, id}) => (
+  <TitleWrapper id={id}>
     <img src={BranchL} alt="logo gauche"/>
     <h1>{title}</h1>
     <img src={BranchR} alt="logo droite"/>

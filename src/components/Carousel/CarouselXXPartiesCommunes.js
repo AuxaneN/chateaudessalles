@@ -1,17 +1,16 @@
 import React from 'react'
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import SlideShow from './CarouselSmall'
-import TarifsNuit from '../Tarifs/TarifsNuit'
+import SlideShow from './CarouselMedium'
 
-const GrandeChambreCarousel= () => {
+const XXPartiesCommunesCarousel = () => {
   const allFile = useStaticQuery(
     graphql`
       query {
         mainImages: allFile(
           filter: {
             extension: { regex: "/(jpg)|(png)|(jpeg)/" }
-            relativeDirectory: { eq: "Hebergement/XIX/Grande_chambre" }
+            relativeDirectory: { eq: "Hebergement/XX/Parties_communes" }
           }
         ) {
           edges {
@@ -19,7 +18,7 @@ const GrandeChambreCarousel= () => {
               id
               name
               childImageSharp {
-                fluid(maxWidth: 1000) {
+                fluid(quality:100, maxWidth: 1500) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }
@@ -29,7 +28,7 @@ const GrandeChambreCarousel= () => {
         thumbnailImages: allFile(
           filter: {
             extension: { regex: "/(jpg)|(png)|(jpeg)/" }
-            relativeDirectory: { eq: "Hebergement/XIX/Grande_chambre" }
+            relativeDirectory: { eq: "Hebergement/XX/Parties_communes" }
           }
         ) {
           edges {
@@ -49,27 +48,26 @@ const GrandeChambreCarousel= () => {
      `
   )
   return (
-    <div className="carrousel">
-      <h4>Grand Chambre - Lit Double</h4>
+    <div style={{width:'max-content', margin:'40px auto'}}>
+    <h4>Les parties communes</h4>
       <SlideShow images={allFile.mainImages.edges.map((image, index) => (
             <Img
-            style={{width:'800px', height:'auto'}}
+            style={{ maxWidth: '1500px',width:'1500px', height:'auto'}}
             key={index}
               fluid={image.node.childImageSharp.fluid}
             />
         ))}  thumbnails={allFile.thumbnailImages.edges.map((image, index) => (
           <Img
-          style={{maxWidth:'50px',width:'50px', height:'50px', maxHeight:'50px'}}
+          style={{maxWidth:'100px',width:'100px', height:'75px', maxHeight:'100px'}}
           key={index}
             fluid={image.node.childImageSharp.fluid}
           />
       ))}
       />
-      <TarifsNuit prix="140€"/>
-    </div>
+      </div>
   );
 
   
 }
 
-export default GrandeChambreCarousel;
+export default XXPartiesCommunesCarousel;

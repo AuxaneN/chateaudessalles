@@ -4,14 +4,14 @@ import Img from "gatsby-image"
 import SlideShow from './CarouselSmall'
 import TarifsNuit from '../Tarifs/TarifsNuit'
 
-const GrandeChambreCarousel= () => {
+const XXGrandeChambreCarousel= () => {
   const allFile = useStaticQuery(
     graphql`
       query {
         mainImages: allFile(
           filter: {
             extension: { regex: "/(jpg)|(png)|(jpeg)/" }
-            relativeDirectory: { eq: "Hebergement/XIX/Grande_chambre" }
+            relativeDirectory: { eq: "Hebergement/XX/Grande_chambre" }
           }
         ) {
           edges {
@@ -29,7 +29,7 @@ const GrandeChambreCarousel= () => {
         thumbnailImages: allFile(
           filter: {
             extension: { regex: "/(jpg)|(png)|(jpeg)/" }
-            relativeDirectory: { eq: "Hebergement/XIX/Grande_chambre" }
+            relativeDirectory: { eq: "Hebergement/XX/Grande_chambre" }
           }
         ) {
           edges {
@@ -72,4 +72,4 @@ const GrandeChambreCarousel= () => {
   
 }
 
-export default GrandeChambreCarousel;
+export default XXGrandeChambreCarousel;

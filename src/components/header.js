@@ -18,6 +18,7 @@ const LinksWrapper = styled.div`
   font-weight: 500;
 `
 const Dropdown = styled.div`
+z-index: 99;
   position:relative;
   .dropdown_elements{
     display:none;

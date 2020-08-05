@@ -622,11 +622,18 @@ pre tt:after {
   }
 }
 footer{
+  width:100vw;
+  height:100px;
+
   display:flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
 
-  max-width: 150px;
   margin-left:auto;
+
+  background-color: #eee7dd;
+}
+footer > * {
+  margin-right: 20px;
 }

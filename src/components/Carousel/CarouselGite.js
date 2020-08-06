@@ -52,7 +52,7 @@ const GiteCarousel = () => {
     <h4>Les parties communes</h4>
       <SlideShow images={allFile.mainImages.edges.map((image, index) => (
             <Img
-            style={{ maxWidth: '1100px',width:'1100px', height:'auto'}}
+            style={{ maxWidth: '1100px', width:'110vw', height:'auto'}}
             key={index}
               fluid={image.node.childImageSharp.fluid}
             />

@@ -22,8 +22,14 @@ const ArrowLeft = styled.div`
   border-bottom:4px white solid;
   border-left:4px white solid;
 
-  right:calc(1000px - 40px);
+  left:20px;
+
   z-index:99;
+
+  @media screen AND (max-width:700px){
+    display:none;
+  }
+
 
 `
 const ArrowRight = styled.div`
@@ -47,10 +53,16 @@ const ArrowRight = styled.div`
   border-top:4px white solid;
   border-right:4px white solid;
 
-  left:calc(1000px - 40px);
+  right:20px;
+
+
+  @media screen AND (max-width:700px){
+    display:none;
+  }
 `
 const DotWrapper = styled(Dots)`
-width:1000px;
+max-width:1000px;
+width:100vw;
 overflow-x:scroll;
 scrollbar-width:none;
 scroll-behavior:smooth;
@@ -59,8 +71,10 @@ justify-content:flex-start;
 `
 const CarouselWrapper = styled(Carousel)`
   position: relative;
-  width:1000px;
-  height:800px;
+  max-width:1000px;
+  width:100vw;
+  max-height:800px;
+  height:auto;
   margin:auto;
   
   button.BrainhubCarousel__arrows.BrainhubCarousel__arrowRight{
@@ -124,6 +138,24 @@ const SlideShow = ({images, thumbnails})=> {
         centered
         itemWidth={1100}
         offset={45}
+ 
+
+        breakpoints={{
+          900:{
+            itemWidth:820,
+          },
+          600:{
+            itemWidth:400,
+          },
+          400:{
+            itemWidth:300,
+            arrows:false
+          },
+          300:{
+            itemWidth:300,
+            arrows:false
+          }
+        }}
 
       >
        {images}

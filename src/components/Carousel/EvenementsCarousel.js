@@ -1,19 +1,38 @@
-import React, {useState} from 'react'
+import React from 'react'
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import Carousel, { Dots, slidesToShowPlugin } from '@brainhubeu/react-carousel';
-import '@brainhubeu/react-carousel/lib/style.css';
+import SlideShow from './Carousel'
+import styled from 'styled-components'
+import colors from "../colors";
+
+const CarouselWrapper = styled.div`
+position:relative;
+
+  h1{
+    position:absolute;
+    top: 10%;
+    width:max-content;
 
 
-function SlideShow() {
-  const [value, setValue] = useState(0);
+    padding:20px;
+    padding-left:10vw;
+
+    background-color: ${colors.beigeLowOpacity};
+    text-align:right;
+    font-weight:bolder;
+    z-index:98;
+  }
+`
+
+const EvenementsCarousel= () => {
   const allFile = useStaticQuery(
     graphql`
       query {
         mainImages: allFile(
+          sort:{fields: name, order:ASC }
           filter: {
             extension: { regex: "/(jpg)|(png)|(jpeg)/" }
-            relativeDirectory: { eq: "Accueil/carrousel" }
+            relativeDirectory: { eq: "Evenements/Carrousel" }
           }
         ) {
           edges {
@@ -21,7 +40,7 @@ function SlideShow() {
               id
               name
               childImageSharp {
-                fluid(maxWidth: 1900) {
+                fluid(quality:90, maxWidth: 2000) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }
@@ -29,9 +48,10 @@ function SlideShow() {
           }
         }
         thumbnailImages: allFile(
+          sort:{fields: name, order:ASC }
           filter: {
             extension: { regex: "/(jpg)|(png)|(jpeg)/" }
-            relativeDirectory: { eq: "Accueil/carrousel" }
+            relativeDirectory: { eq: "Evenements/Carrousel" }
           }
         ) {
           edges {
@@ -39,7 +59,7 @@ function SlideShow() {
               id
               name
               childImageSharp {
-                fluid(maxWidth: 100) {
+                fluid(maxWidth: 200) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }
@@ -48,38 +68,20 @@ function SlideShow() {
         }
       }
       
-    `
+     `
   )
-  const onChange = value => {
-  setValue(value);
-  }
   return (
-    <div>
-      <Carousel
-        value={value}
-        onChange={onChange}
-        plugins={[
-          {
-            resolve: slidesToShowPlugin,
-            options: {
-             numberOfSlides: 1
-            }
-          },
-        ]}
-        arrows
-      >
-       {allFile.mainImages.edges.map((image, index) => (
+    <CarouselWrapper>
+      <h1>
+        Vivez vos plus beaux moments <br/> au château des Salles
+      </h1>
+      <SlideShow images={allFile.mainImages.edges.map((image, index) => (
             <Img
-            style={{maxWidth:'1900px', width:'100vw', height:'auto', maxHeight:'637px'}}
+            style={{maxWidth:'1940px', width:'110vw', height:'auto', maxHeight:'700px'}}
             key={index}
               fluid={image.node.childImageSharp.fluid}
             />
-        ))}
-      </Carousel>
-      <Dots
-        value={value}
-        onChange={onChange}
-        thumbnails={allFile.thumbnailImages.edges.map((image, index) => (
+        ))}  thumbnails={allFile.thumbnailImages.edges.map((image, index) => (
           <Img
           style={{maxWidth:'100px',width:'100px', height:'75px', maxHeight:'100px'}}
           key={index}
@@ -87,10 +89,10 @@ function SlideShow() {
           />
       ))}
       />
-    </div>
+    </CarouselWrapper>
   );
 
   
 }
 
-export default SlideShow;
+export default EvenementsCarousel;

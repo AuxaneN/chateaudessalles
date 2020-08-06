@@ -8,6 +8,7 @@ const PartiesCommunesCarousel = () => {
     graphql`
       query {
         mainImages: allFile(
+          sort:{fields: name, order:ASC }
           filter: {
             extension: { regex: "/(jpg)|(png)|(jpeg)/" }
             relativeDirectory: { eq: "Hebergement/XIX/Parties_communes" }
@@ -26,6 +27,7 @@ const PartiesCommunesCarousel = () => {
           }
         }
         thumbnailImages: allFile(
+          sort:{fields: name, order:ASC }
           filter: {
             extension: { regex: "/(jpg)|(png)|(jpeg)/" }
             relativeDirectory: { eq: "Hebergement/XIX/Parties_communes" }

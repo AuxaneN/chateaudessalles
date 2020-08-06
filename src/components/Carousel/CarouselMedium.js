@@ -8,7 +8,7 @@ const CarouselWrapper = styled(Carousel)`
 
   position: relative;
   width:1400px;
-  height:600px;
+  height:800px;
   margin:auto;
   
   button.BrainhubCarousel__arrows.BrainhubCarousel__arrowRight{

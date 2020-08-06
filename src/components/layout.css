@@ -637,3 +637,8 @@ footer{
 footer > * {
   margin-right: 20px;
 }
+
+/*Force width: max-content on the carousel*/
+.BrainhubCarousel__track{
+  width: max-content!important;
+}

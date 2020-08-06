@@ -9,6 +9,7 @@ const XXPetiteChambreCarousel= () => {
     graphql`
       query {
         mainImages: allFile(
+          sort:{fields: name, order:ASC }
           filter: {
             extension: { regex: "/(jpg)|(png)|(jpeg)/" }
             relativeDirectory: { eq: "Hebergement/XX/Petite_chambre" }
@@ -27,6 +28,7 @@ const XXPetiteChambreCarousel= () => {
           }
         }
         thumbnailImages: allFile(
+          sort:{fields: name, order:ASC }
           filter: {
             extension: { regex: "/(jpg)|(png)|(jpeg)/" }
             relativeDirectory: { eq: "Hebergement/XX/Petite_chambre" }

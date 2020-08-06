@@ -1,7 +1,7 @@
 import React from 'react'
 
 import styled from 'styled-components'
-// import colors from '../colors'
+import colors from '../colors'
 
 const TextAndImageWrapper = styled.div`
 display:flex;
@@ -22,7 +22,7 @@ margin:40px auto;
 
     width:700px;
     padding:40px;
-    background-color: #eee7ddd4;
+    background-color: ${colors.beigeLowOpacity};
 
     text-align:justify;
     z-index: 99;

@@ -37,6 +37,8 @@ const SlideShow = ({images, thumbnails})=> {
         ]}
         arrows
         centered
+        itemWidth={1940}
+        offset={0}
       >
        {images}
       </CarouselWrapper>

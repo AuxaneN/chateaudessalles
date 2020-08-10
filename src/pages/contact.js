@@ -1,15 +1,25 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import CDNLoader from '../components/Carte/CDNLoader'
+import Carte from "../components/Carte/Carte"
+import Infos from "../components/Contact/Infos"
+import Hotes from "../components/Contact/Hotes"
+
+import SubTitle from '../components/Title/SubTitle'
 
 const SecondPage = () => (
   <Layout>
+    <CDNLoader />
     <SEO title="Contact" />
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
+   <Infos />
+   <SubTitle title="VOS HÔTES"/>
+   <Hotes />
+   <SubTitle title="ACCÉDER AU CHÂTEAU"/>
+    <div className="carte_wrapper"  style={{width:'100vw'}}> 
+      <Carte />
+    </div>
   </Layout>
 )
 

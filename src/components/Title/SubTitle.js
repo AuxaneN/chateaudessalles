@@ -5,6 +5,7 @@ import colors from '../colors';
 const SubTitleWrapper = styled.div`
 
 width:max-content;
+max-width:100vw;
 height: 60px;
 margin:20px 0px;
 
@@ -18,7 +19,7 @@ align-items:center;
 
 h1{
   margin:0px;
-  margin-left:calc(100vw - 1600px);
+  margin-left:20px;
   padding:20px;
 }
 

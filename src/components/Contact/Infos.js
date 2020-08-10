@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import {SocialIcon} from 'react-social-icons'
 import colors from '../colors'
-import SubTitle from '../Title/SubTitle'
+// import SubTitle from '../Title/SubTitle'
 
 
 const InfoWrapper = styled.div`

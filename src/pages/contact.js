@@ -11,7 +11,7 @@ import SubTitle from '../components/Title/SubTitle'
 
 const SecondPage = () => (
   <Layout>
-    <CDNLoader />
+    {/* <CDNLoader /> */}
     <SEO title="Contact" />
    <Infos />
    <SubTitle title="VOS HÔTES"/>

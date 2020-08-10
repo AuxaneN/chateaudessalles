@@ -13,11 +13,12 @@ position:relative;
 
 height:auto;
 width:70vw;
-
+max-width:100vw;
 margin:40px auto;
   .text{ 
     position: relative;
     width:calc(50% - 10px);
+    max-width:100vw;
     flex: 0 0 calc(45% - 10px);;
 
     color: ${colors.olive};
@@ -52,8 +53,7 @@ margin:40px auto;
       justify-content:${props => props.reversed ? `space-between` : `flex-end`};;
       
       width:100%;
-
-      
+     
       .tarif{
         width:200px;
         padding:10px;
@@ -112,7 +112,6 @@ margin:40px auto;
       order:1;
     }
   }
-
 `
 const TextAndImageEvent = (props) => (
   <TextAndImageWrapper reversed={props.reversed}>

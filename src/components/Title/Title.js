@@ -5,8 +5,8 @@ import BranchL from '../../images/CDS_BrancheL.png';
 import BranchR from '../../images/CDS_BrancheR.png';
 
 const TitleWrapper = styled.div`
-
-width:100vw;
+max-width:100vw;
+width:100%;
 height: 100px;
 margin:40px auto;
 

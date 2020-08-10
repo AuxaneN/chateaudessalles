@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const ResponsiveWrapper = styled.div`
 position: relative;
   width:100vw;
-  @media screen AND (max-width:800px){
+  @media screen AND (max-width:900px){
     margin:auto;
     width:99vw;
     display:flex;

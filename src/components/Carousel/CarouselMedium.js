@@ -45,8 +45,8 @@ const ArrowLeft = styled.div`
   cursor:pointer;
   border-bottom:4px white solid;
   border-left:4px white solid;
-
   left:10px;
+
 
   z-index:99;
   

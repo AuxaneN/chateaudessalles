@@ -20,7 +20,9 @@ const SecondPage = () => (
   <Layout>
     <SEO title="Hébergements" />
     <Title title="LES CHAMBRES D’HÔTE" id="chambres"/>
+    <ResponsiveWrapper>
     <SubTitle title="Période XIXe siècle"/>
+    </ResponsiveWrapper>
     <div className="XIX"  style={{margin:'40px auto'}}>
       <ResponsiveWrapper>
         <PartiesCommunesCarousel/>
@@ -33,8 +35,11 @@ const SecondPage = () => (
       <MailButton />
     </div>
 
+    <ResponsiveWrapper>
+      
     <SubTitle title="Période XXe siècle"/>
-    <div className="XX"  style={{margin:'40px auto'}}>
+    </ResponsiveWrapper>
+    <div className="XX"  style={{margin:'auto'}}>
     <ResponsiveWrapper>
         <XXPartiesCommunesCarousel/>
     </ResponsiveWrapper>

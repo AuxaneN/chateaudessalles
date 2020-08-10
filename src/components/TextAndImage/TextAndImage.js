@@ -8,17 +8,18 @@ display:flex;
 flex-direction: ${props => props.reversed ? 'row-reverse' : 'row'};
 justify-content:space-between;
 align-items: flex-end;
+flex-wrap:wrap;
 
 position:relative;
 
 height:max-content;
-width:100vw;
+max-width:100vw;
 
 margin:40px auto;
   .text{ 
     position:absolute;
     ${props => props.reversed ? 'left:15vw;' : 'right:15vw;'};
-    bottom:50px;
+    bottom:5%;
 
     width:700px;
     padding:40px;
@@ -28,9 +29,9 @@ margin:40px auto;
     z-index: 99;
   }
   .image{ 
-    max-width: 50vw;
+    max-width: 900px;
     height:auto;
-    width:700px;
+    width:100vw;
 
     flex: 1 0 60%;
   }
@@ -38,6 +39,8 @@ margin:40px auto;
   @media screen AND (max-width:700px){
     .text{
       order:2;
+    position:initial;
+
     }
     .image{
       order:1;

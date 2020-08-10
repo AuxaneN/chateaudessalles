@@ -7,7 +7,7 @@ import styled from 'styled-components';
 
 
 const AccueilHero = styled(BackgroundImage)`
-  width: 100%;
+  max-width: 100vw;
   background-position: center center;
   background-repeat: repeat-y;
   background-size: cover;
@@ -33,9 +33,8 @@ const Accueil1 = () => {
   className="hero"
   fluid={data.placeholderImage.childImageSharp.fluid}
   backgroundColor={colors.olive}
-  >
-    <p>test</p>
-    </AccueilHero>
+  />
+
 }
 
 

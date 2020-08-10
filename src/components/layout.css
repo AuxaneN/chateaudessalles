@@ -622,7 +622,7 @@ pre tt:after {
   }
 }
 footer{
-  width:100vw;
+  max-width:100vw;
   height:100px;
 
   display:flex;
@@ -634,7 +634,8 @@ footer{
 
   background-color: #eee7dd;
 }
-footer > * {
+
+footer > *:not(:last-child) {
   margin-right: 20px;
 }
 

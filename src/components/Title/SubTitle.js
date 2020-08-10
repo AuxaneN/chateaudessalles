@@ -6,7 +6,7 @@ const SubTitleWrapper = styled.div`
 
 width:max-content;
 height: 60px;
-margin:60px 0px;
+margin:20px 0px;
 
 background-color: ${colors.beige};
 color: ${colors.olive};
@@ -20,6 +20,13 @@ h1{
   margin:0px;
   margin-left:calc(100vw - 1600px);
   padding:20px;
+}
+
+@media screen AND (max-width:900){
+  h1{
+    margin-left:0;
+    margin-right:0;
+  }
 }
 `
 

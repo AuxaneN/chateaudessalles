@@ -7,12 +7,14 @@ import colors from "../colors";
 
 const CarouselWrapper = styled.div`
 position:relative;
-
+height:auto;
   h1{
     position:absolute;
     top: 10%;
     width:max-content;
+    max-width:100vw;
 
+    box-sizing:border-box;
 
     padding:20px;
     padding-left:10vw;
@@ -21,6 +23,13 @@ position:relative;
     text-align:right;
     font-weight:bolder;
     z-index:98;
+    @media screen AND (max-width:700px){
+    padding-left:initial;
+
+    width:100vw;
+    text-align:center;
+    top:0;
+    }
   }
 `
 
@@ -77,7 +86,7 @@ const EvenementsCarousel= () => {
       </h1>
       <SlideShow images={allFile.mainImages.edges.map((image, index) => (
             <Img
-            style={{maxWidth:'1940px', width:'110vw', height:'auto', maxHeight:'700px'}}
+            style={{maxWidth:'1920px', width:'110vw', height:'auto', maxHeight:'700px'}}
             key={index}
               fluid={image.node.childImageSharp.fluid}
             />

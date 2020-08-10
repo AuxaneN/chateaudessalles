@@ -49,7 +49,7 @@ et la famille Rhodius au XXIe siècle.
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <div style={{ minWidth: `100vw`, height:'600px' }}>
+    <div style={{ maxWidth: `100vw`, height:'600px' }}>
       <Accueil1 />
     </div>
     <div style={{padding:`1rem`, backgroundColor: colors.beige}}>

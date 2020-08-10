@@ -21,7 +21,7 @@ overflow-x:hidden;
   .text{ 
     ${props => props.reversed ? `margin-left: 40px;` : `margin-right: 40px;`}
 
-    padding:0px 50px;
+    padding:60px;
     position: relative;
     width:calc(50% - 10px);
     max-width:100vw;
@@ -34,14 +34,18 @@ overflow-x:hidden;
     display:flex;
     flex-direction:column;
     justify-content:center;
-    flex: 1 1 30em;
-
+    flex: 2 1 70%;
 
     h2{
       color:${colors.olive};
+      margin-top:40px;
+    }
+
+    > h2{
+      color:${colors.olive};
       align-self:center;
       position:absolute;
-
+      margin-top:initial;
       top:10px;
       left:40px;
       ::after{
@@ -60,14 +64,14 @@ overflow-x:hidden;
 
       }
     }
+
   }
   .image{ 
     max-width: 50vw;
+    width:300px;
     height:auto;
-    max-height:450px;
-    overflow-y:hidden;
-    
-    flex: 0 2 30em;
+    overflow:hidden;
+    flex: ${props => props.imageFlex};
     z-index:100;
   }
 
@@ -88,14 +92,15 @@ overflow-x:hidden;
       max-width:100%;
       flex: 1 0 100%;
       order:1;
+      max-height:50vh;
     }
   }
 `
-const TextAndImageAgriculture = (props) => (
-  <TextAndImageWrapper reversed={props.reversed}>
+const TextAndImageHistoire = (props) => (
+  <TextAndImageWrapper reversed={props.reversed} imageFlex={props.imageFlex}>
     <div className="text">
-    <h2>{props.title}</h2>
-    <p>{props.texte}</p>
+      {props.title ? <h2>{props.title}</h2> : '' }
+    {props.texte}
     </div>
     <div className="image">
       {props.image}
@@ -103,4 +108,4 @@ const TextAndImageAgriculture = (props) => (
   </TextAndImageWrapper>
 )
 
-export default TextAndImageAgriculture
+export default TextAndImageHistoire

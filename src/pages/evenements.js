@@ -15,7 +15,7 @@ const SecondPage = () => (
   <Layout>
     <SEO title="Événements" />
       <EvenementsCarousel style={{width:'100vw'}}/>
-      <Title title="GRANDE SALLE DE RÉCEPTION DU CHÂTEAU"/>
+      <Title title="GRANDE SALLE DE RÉCEPTION DU CHÂTEAU" id="grandeSalle"/>
       <TextAndImageEvent 
       options={
       <>
@@ -47,7 +47,7 @@ const SecondPage = () => (
       reversed
       />
       <EvenementTexteAdditionnel texte={<p>- Le mobilier (tables et chaises) sont inclus dans la location <br/>- Nombre maximum d’invités : 50 personnes<br/>  - Pas de mariages</p>} />
-      <Title title="SALLE DES CUVES ET SON BAR"/>
+      <Title title="SALLE DES CUVES ET SON BAR" id="cuve"/>
       <CuveComponent />
 
   </Layout>

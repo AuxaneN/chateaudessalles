@@ -38,7 +38,7 @@ const PartiesCommunesCarousel = () => {
               id
               name
               childImageSharp {
-                fluid(maxWidth: 100) {
+                fluid(maxWidth: 1500) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }

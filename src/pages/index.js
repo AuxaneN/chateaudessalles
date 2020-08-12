@@ -3,12 +3,14 @@ import React from "react"
 import colors from '../components/colors'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import ScriptLoader from '../components/InstagramFeed/ScriptLoader'
 
 import Accueil1 from '../components/images/Accueil/Accueil1'
 import Accueil2 from '../components/images/Accueil/Accueil2'
 import Accueil3 from '../components/images/Accueil/Accueil3'
 import Accueil4 from '../components/images/Accueil/Accueil4'
 import TextAndImage from "../components/TextAndImage/TextAndImage"
+import InstagramFeed from "../components/InstagramFeed/InstagramFeed"
 
 const text1 = `Le domaine actuel, formé de la bastide, de la chapelle, du parc et des terres
 agricoles, fut constitué progressivement. Le nom de Salles provient du latin sala qui
@@ -49,6 +51,7 @@ et la famille Rhodius au XXIe siècle.
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
+    <ScriptLoader />
     <div style={{ maxWidth: `100vw`, height:'600px' }}>
       <Accueil1 />
     </div>
@@ -61,6 +64,8 @@ const IndexPage = () => (
     <TextAndImage text={text1} image={<Accueil2 />}/>
     <TextAndImage text={text2} image={<Accueil3 />} reversed />
     <TextAndImage text={text3} image={<Accueil4 />} />
+
+    {/* <InstagramFeed /> */}
   </Layout>
 )
 export default IndexPage

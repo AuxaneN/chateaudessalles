@@ -139,15 +139,17 @@ const SlideShow = ({images, thumbnails})=> {
         itemWidth={1940}
         offset={45}
 
-        breakpoints={{
+         breakpoints={{
           900:{
-            itemWidth:820,
+            itemWidth:1000,
           },
+
           600:{
-            itemWidth:400,
+            itemWidth:650,
+            arrows:false,
           },
           400:{
-            itemWidth:300,
+            itemWidth:375,
             arrows:false
           },
           300:{

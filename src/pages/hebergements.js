@@ -27,7 +27,7 @@ const SecondPage = () => (
       <ResponsiveWrapper>
         <PartiesCommunesCarousel/>
       </ResponsiveWrapper>
-      <ResponsiveWrapper style={{ display: 'flex', justifyContent: 'space-evenly', alignContent: 'flex-start', width: '100vw' }}>
+      <ResponsiveWrapper style={{ display: 'flex', justifyContent: 'space-evenly', alignContent: 'center', width: '100vw', flexWrap:'wrap' }}>
         <GrandeChambreCarousel/>
         <PetiteChambreCarousel/>
       </ResponsiveWrapper>
@@ -43,7 +43,7 @@ const SecondPage = () => (
     <ResponsiveWrapper>
         <XXPartiesCommunesCarousel/>
     </ResponsiveWrapper>
-      <ResponsiveWrapper style={{ display: 'flex', justifyContent: 'space-evenly', alignContent: 'flex-start', width: '100vw' }}>
+      <ResponsiveWrapper style={{ display: 'flex', justifyContent: 'space-evenly', alignContent: 'center', width: '100vw', flexWrap:'wrap'}}>
         <XXGrandeChambreCarousel/>
         <XXPetiteChambreCarousel/>
       </ResponsiveWrapper>

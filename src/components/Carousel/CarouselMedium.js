@@ -10,7 +10,7 @@ const CarouselWrapper = styled(Carousel)`
   /* width:1400px;
   height:800px; */
   width:100vw;
-  max-width:1400px;
+  max-width:1100px;
   height:auto;
   max-height:800px;
   margin:auto;
@@ -144,18 +144,20 @@ const SlideShow = ({images, thumbnails})=> {
         ]}
         arrows
         centered
-        itemWidth={1500}
+        itemWidth={1200}
         offset={45}
 
         breakpoints={{
           900:{
-            itemWidth:820,
+            itemWidth:1000,
           },
+
           600:{
-            itemWidth:400,
+            itemWidth:650,
+            arrows:false,
           },
           400:{
-            itemWidth:300,
+            itemWidth:375,
             arrows:false
           },
           300:{

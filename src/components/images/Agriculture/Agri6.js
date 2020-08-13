@@ -15,7 +15,7 @@ const Agri6 = () => {
     }
   `)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  return <Img fluid={data.placeholderImage.childImageSharp.fluid} alt="Un apiculteur est en train de récolter des rayons de miel. Un ligne de 7 ruches est visible derrière."/>
 }
 
 export default Agri6

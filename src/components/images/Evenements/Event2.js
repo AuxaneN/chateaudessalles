@@ -15,7 +15,7 @@ const Event2 = () => {
     }
   `)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  return <Img fluid={data.placeholderImage.childImageSharp.fluid} alt="La facade extérieure de la salle de réception du château. Deux tables sont installées dans l'herbe. Les arbres autour les protègent des rayons du soleil."/>
 }
 
 export default Event2

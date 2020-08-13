@@ -15,7 +15,7 @@ const Event1 = () => {
     }
   `)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  return <Img fluid={data.placeholderImage.childImageSharp.fluid} alt="Une grande salle aux murs blancs avec un sol en pierre carrelée et plusieurs lustres. Des invités sont assis autour d'une table longue."/>
 }
 
 export default Event1

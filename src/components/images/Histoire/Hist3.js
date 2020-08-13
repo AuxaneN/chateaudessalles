@@ -15,7 +15,7 @@ const Hist3 = () => {
     }
   `)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  return <Img fluid={data.placeholderImage.childImageSharp.fluid} alt="Vue de l'intérieur de la chapelle. Au premier plan : deux bancs en bois. Au fond: un autel comportant une statue, un vase ainsi qu'un bougeoir."/>
 }
 
 export default Hist3

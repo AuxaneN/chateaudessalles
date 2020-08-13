@@ -15,7 +15,7 @@ const Agri5 = () => {
     }
   `)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  return <Img fluid={data.placeholderImage.childImageSharp.fluid} alt="Une poule fixe la caméra. Au fond se distinguent 3 autres poules."/>
 }
 
 export default Agri5

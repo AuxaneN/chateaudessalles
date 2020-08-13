@@ -15,7 +15,7 @@ const Agri4 = () => {
     }
   `)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  return <Img fluid={data.placeholderImage.childImageSharp.fluid} alt="Un prunier portant des fruits."/>
 }
 
 export default Agri4

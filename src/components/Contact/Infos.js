@@ -8,8 +8,7 @@ import colors from '../colors'
 
 const InfoWrapper = styled.div`
  width:100%;
- max-width:100vw;
-
+ max-width:80vw;
 
  display:flex;
  flex-direction:row;
@@ -20,7 +19,15 @@ const InfoWrapper = styled.div`
    background-color:${colors.beige};
    color:${colors.olive};
    padding:20px;
-   align-self:stretch;
+   white-space: nowrap;
+
+   font-size:2.5vw;
+ }
+ .item{
+   flex: 1 1 25%;
+ }
+ .item::first-child{
+   flex:2 0 35%;
  }
  .item p{
    padding:20px;
@@ -32,8 +39,13 @@ const InfoWrapper = styled.div`
   > *{
     flex: 0 1 25%;
  }
- @media screen AND (max-width:600px){
+ @media screen AND (max-width:1000px){
   flex-direction:column;
+ max-width:100vw;
+
+  h1{
+    font-size:2.25rem;
+  }
   > *{
     flex: 1 1 25%;
  }
@@ -59,11 +71,11 @@ const Infos = () => (
   </div>
   <div className="item">
     <h1>NOUS SUIVRE</h1>
-    <SocialIcon url="https://facebook.com" 
+    <SocialIcon url="https://www.facebook.com/chateaudessalles"
           fgColor={colors.olive} 
           bgColor="transparent" 
           style={{border:`2px solid ${colors.olive}`, borderRadius:'100%', height:'30px', width:'30px'}} /> 
-    <SocialIcon url="https://instagram.com"
+    <SocialIcon url="https://instagram.com/chateaudessalles/"
           fgColor={colors.olive} 
           bgColor="transparent" 
           style={{border:`2px solid ${colors.olive}`, borderRadius:'100%', height:'30px', width:'30px'}}/>

@@ -15,7 +15,7 @@ const Agri2 = () => {
     }
   `)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  return <Img fluid={data.placeholderImage.childImageSharp.fluid} alt="Un champ de vigne s'étend jusqu'à l'horizon."/>
 }
 
 export default Agri2

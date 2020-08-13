@@ -2,6 +2,7 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import colors from "../components/colors"
 
 import PartiesCommunesCarousel from '../components/Carousel/CarouselXIXPartiesCommunes'
 import GrandeChambreCarousel from '../components/Carousel/CarouselXIXGrandeChambre'
@@ -60,7 +61,7 @@ const SecondPage = () => (
     </div>
       <MailButton />
 
-    <hr style={{maxWidth:'400px',width:'100vw', color:'olive', margin:'40px auto'}}></hr>
+    <hr style={{maxWidth:'400px',width:'100vw', backgroundColor:colors.olive, margin:'40px auto'}}></hr>
     
     <div className="details"
     style={{

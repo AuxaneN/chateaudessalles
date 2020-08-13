@@ -15,7 +15,7 @@ const Hist2 = () => {
     }
   `)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  return <Img fluid={data.placeholderImage.childImageSharp.fluid} alt="Vue en contre-plongée d'une chapelle. En haut de la tour est suspendue une cloche."/>
 }
 
 export default Hist2

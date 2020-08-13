@@ -15,7 +15,7 @@ const Accueil3 = () => {
     }
   `)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  return <Img fluid={data.placeholderImage.childImageSharp.fluid} alt="Un bassin artificiel prend toute la largeur. L'eau est calme. Juste derrière se trouve des arbres."/>
 }
 
 export default Accueil3

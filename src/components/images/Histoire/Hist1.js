@@ -15,7 +15,7 @@ const Hist1 = () => {
     }
   `)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  return <Img fluid={data.placeholderImage.childImageSharp.fluid} alt="Une vue plongeante sur le château des Salles : bâtisses, champs et chemins sont visibles."/>
 }
 
 export default Hist1

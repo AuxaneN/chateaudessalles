@@ -15,7 +15,7 @@ const Hist4 = () => {
     }
   `)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  return <Img fluid={data.placeholderImage.childImageSharp.fluid} alt="Image prise au milieu des champs de vignes."/>
 }
 
 export default Hist4

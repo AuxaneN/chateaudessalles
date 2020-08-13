@@ -15,7 +15,7 @@ const Agri3 = () => {
     }
   `)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  return <Img fluid={data.placeholderImage.childImageSharp.fluid} alt="Un chemin encadré d'arbres mène a travers l'oliverae"/>
 }
 
 export default Agri3

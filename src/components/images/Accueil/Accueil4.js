@@ -15,7 +15,7 @@ const Accueil4 = () => {
     }
   `)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  return <Img fluid={data.placeholderImage.childImageSharp.fluid} alt="Une statue de lion couché, située juste devant la porte d'entrée du château."/>
 }
 
 export default Accueil4

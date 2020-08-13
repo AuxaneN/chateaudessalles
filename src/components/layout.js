@@ -43,13 +43,15 @@ const Layout = ({ children }) => {
           style={{
             color: colors.olive,
             textDecoration: 'none',
+            fontSize:'20px',
+            fontWeight:'bolder'
           }}
           >Contact</Link>  
-          <SocialIcon url="https://facebook.com" 
+          <SocialIcon url="https://www.facebook.com/chateaudessalles"
           fgColor={colors.olive} 
           bgColor="transparent" 
           style={{border:`2px solid ${colors.olive}`, borderRadius:'100%', height:'30px', width:'30px'}} /> 
-          <SocialIcon url="https://instagram.com"
+          <SocialIcon url="https://instagram.com/chateaudessalles/"
           fgColor={colors.olive} 
           bgColor="transparent" 
           style={{border:`2px solid ${colors.olive}`, borderRadius:'100%', height:'30px', width:'30px'}}/>

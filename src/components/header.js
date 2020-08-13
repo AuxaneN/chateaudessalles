@@ -32,8 +32,18 @@ const LinksWrapper = styled.div`
   margin:0px auto;
   padding:20px 0px;
 
-  font-weight: 500;
-  z-index:101;
+  font-weight: bolder;
+  font-size:20px;
+  z-index:102;
+  *{
+    text-decoration:none;
+    color:${colors.olive};
+    transition:0.5s;
+    :hover{
+      transition:0.5s;
+      color:black;
+    }
+  }
   @media screen AND (max-width:1000px){
     position: fixed;
     display:${props => props.isFreshLoad ? 'none' : 'flex'};
@@ -60,6 +70,7 @@ const Dropdown = styled.div`
 z-index: 99;
   position:relative;
   .dropdown_elements{
+    font-size:18px;
     display:none;
   }
   :hover{
@@ -155,7 +166,8 @@ const MobileMenu = styled.div`
 `
 const linkStyle = {
   color: colors.olive,
-  textDecoration: 'none',
+  textDecoration: 'none'
+
 }
 
 
@@ -206,7 +218,7 @@ return (
     <LinksWrapper isOpen={isOpen} isFreshLoad={isFreshLoad}>
       <Link 
       to="/"
-      style={linkStyle}
+    
       activeStyle={{color:colors.text}}
       >
         Accueil
@@ -214,17 +226,17 @@ return (
       <Dropdown>
           <Link 
           to="/hebergements"
-          style={linkStyle}
+        
           activeStyle={{color:colors.text}}
           activeClassName="current"
           >
             Hébergements
           </Link>
           <div className="dropdown_elements">
-              <a href="/hebergements#chambres" onClick={navChambres} style={linkStyle}>
+              <a href="/hebergements#chambres" onClick={navChambres}>
               Les chambres d’hôte
               </a>
-              <a href="/hebergements#gite" onClick={nav} style={linkStyle}>
+              <a href="/hebergements#gite" onClick={nav}>
                 Le gîte
               </a>
           </div>
@@ -232,37 +244,37 @@ return (
       <Dropdown>
         <Link 
         to="/evenements"
-        style={linkStyle}
+      
         activeStyle={{color:colors.text}}
         >
         Événements
         </Link>
         <div className="dropdown_elements">
-          <a href="/evenements#grandeSalle" onClick={navGrandeSalle} style={linkStyle}>
+          <a href="/evenements#grandeSalle" onClick={navGrandeSalle}>
           Grande salle de réception du chateau
           </a>
-          <a href="/evenements#cuve" onClick={navCuve} style={linkStyle}>
+          <a href="/evenements#cuve" onClick={navCuve}>
             Salle des cuves et son bar
           </a>
         </div>
       </Dropdown>
       <Link 
       to="/agriculture"
-      style={linkStyle}
+    
       activeStyle={{color:colors.text}}
       >
         Agriculture
       </Link>
       <Link 
       to="/histoire"
-      style={linkStyle}
+    
       activeStyle={{color:colors.text}}
       >
        Histoire
       </Link>
       <Link 
       to="/contact"
-      style={linkStyle}
+    
       activeStyle={{color:colors.text}}
       >
        Contact

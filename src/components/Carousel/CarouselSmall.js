@@ -84,13 +84,15 @@ const ArrowRight = styled.div`
   }
 `
 const DotWrapper = styled(Dots)`
-max-width:600px;
+max-width:max-content;
 width:100vw;
 overflow-x:scroll;
 scrollbar-width:none;
 scroll-behavior:smooth;
 position:relative;
 justify-content:flex-start;
+margin:0px auto;
+
 `
 
 var getNextSibling = function (elem, selector) {

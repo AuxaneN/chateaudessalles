@@ -65,7 +65,7 @@ const IndexPage = () => (
     <TextAndImage text={text2} image={<Accueil3 />} reversed />
     <TextAndImage text={text3} image={<Accueil4 />} />
 
-    {/* <InstagramFeed /> */}
+    <InstagramFeed />
   </Layout>
 )
 export default IndexPage

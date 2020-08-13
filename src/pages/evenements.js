@@ -14,7 +14,7 @@ import CuveComponent from "../components/CuveComponent"
 const SecondPage = () => (
   <Layout>
     <SEO title="Événements" />
-      <EvenementsCarousel style={{width:'100vw'}}/>
+      <EvenementsCarousel/>
       <Title title="GRANDE SALLE DE RÉCEPTION DU CHÂTEAU" id="grandeSalle"/>
       <TextAndImageEvent 
       options={

@@ -15,7 +15,7 @@ const Hist0 = () => {
     }
   `)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  return <Img fluid={data.placeholderImage.childImageSharp.fluid} alt="Une carte ancienne centrée sur Draguignan. Le centre de la ville est marqué en rouge."/>
 }
 
 export default Hist0

@@ -1,0 +1,23 @@
+Le code que vous obtiendrez à la fin de ce processus n'est valable qu'une heure.
+C'est un laps de temps amplement suffisant pour que je puisse faire tout ce qu'il y a à faire de mon côté, mais pour éviter de répéter certaines étapes envoyez le dès que vous l'avez obtenu !
+
+1 > Se connecter à Instagram sur PC
+2 > Aller dans les paramètres (Profil > paramètres)
+3 > Aller dans l'onglet "Apps et sites Web" puis "Invitations à tester"
+4 > Accepter l'invitation
+
+Attention à ne pas rafraichir la page ou revenir en arrière par mégarde dans les étapes suivantes :
+5 > Se rendre à l'adresse 
+https://www.instagram.com/oauth/authorize?client_id=720164185501406&redirect_uri=https://chateaudessalles.fr/auth&scope=user_profile,user_media&response_type=code
+
+6 > Autoriser l'application, vous serez amené à une page d'erreur (page introuvable) mais pas d'inquiétude, c'est normal.
+7 > Copier le contenu de la barre d'adresse, il s'agit du code nécessaire au développement !
+Il devrait ressembler à cela, en beaucoup plus long : https://chateaudedessalles/auth?code=AQD7M9[...]"
+
+8 > Envoyez moi ce code à auxane.nith@protonmail.com et je m'occupe du reste.
+
+Vous avez perdu votre code ? Revenez sur le lien de l'étape 5. Instagram vous annoncera que vous avez déjà authorisé cette application. Cliquez sur "Continuer" et vous serez amenez sur la page contenant le code d'authorisation.
+
+
+Pour en savoir plus: Vous venez de créer un code d'authorisation. Il est valable une heure et permet à Instagram de vérifier que c'est bien vous, le propriétaire du compte, qui cherche à récupérer les photos disponibles sur votre compte.
+Pour éviter de répéter cette même action toutes les heures, je vais de mon côté l'échanger pour un token valable 60 jours. Enfin, pour qu'il soit toujours valable, il serait rafraichit tous les mois.

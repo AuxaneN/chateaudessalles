@@ -15,7 +15,7 @@ const Accueil2 = () => {
     }
   `)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  return <Img fluid={data.placeholderImage.childImageSharp.fluid} alt="Une feuille de figuier, centrée et prenant toute la hauteur"/>
 }
 
 export default Accueil2

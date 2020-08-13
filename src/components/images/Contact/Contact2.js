@@ -15,7 +15,7 @@ const Contact2 = () => {
     }
   `)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  return <Img fluid={data.placeholderImage.childImageSharp.fluid} alt="Une camionnette bleu clair est stationnée devant un mur de pierre. A l'arrière de la voiture sont empilées des cagettes de fruits et légumes." />
 }
 
 export default Contact2

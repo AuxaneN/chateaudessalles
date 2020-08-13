@@ -3,7 +3,7 @@ const colors = {
   'beige': '#eee7dd',
   'beigeLowOpacity': '#eee7ddd4',
   'taupe': '#d4c2aa',
-  'olive' : '#69816b'
+  'olive' : '#5a715c'
 }
 
 export default colors;

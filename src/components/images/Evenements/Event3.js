@@ -15,7 +15,7 @@ const Event3 = () => {
     }
   `)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  return <Img fluid={data.placeholderImage.childImageSharp.fluid} alt="Un bâtiment en pierre dans les tons crème."/>
 }
 
 export default Event3

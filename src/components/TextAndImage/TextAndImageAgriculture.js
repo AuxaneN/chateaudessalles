@@ -63,10 +63,11 @@ overflow-x:hidden;
   }
   .image{ 
     max-width: 50vw;
-    height:auto;
+    height:100%;
     max-height:450px;
     overflow-y:hidden;
-    
+    align-self:stretch;
+    width:auto;
     flex: 0 2 30em;
     z-index:100;
   }

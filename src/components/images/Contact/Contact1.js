@@ -15,7 +15,11 @@ const Contact1 = () => {
     }
   `)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} alt="Une voiture ancienne, noire et propre, stationnée devant le château."/>
+  return <Img 
+  fluid={data.placeholderImage.childImageSharp.fluid} 
+  alt="Une voiture ancienne, noire et propre, stationnée devant le château."
+  imgStyle={{top:"-69px", height:'auto'}}
+  />
 }
 
 export default Contact1

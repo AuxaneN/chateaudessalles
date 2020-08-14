@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <div className="loader">
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
@@ -57,7 +57,7 @@ const Layout = ({ children }) => {
           style={{border:`2px solid ${colors.olive}`, borderRadius:'100%', height:'30px', width:'30px'}}/>
         </footer>
       </div>
-    </>
+    </div>
   )
 }
 

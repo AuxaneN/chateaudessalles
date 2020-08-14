@@ -53,7 +53,7 @@ const GrandeChambreCarousel= () => {
   )
   return (
     <div className="carrousel">
-      <h4>Grand Chambre - Lit Double</h4>
+      <h4>Grande Chambre - Lit Double</h4>
       <SlideShow images={allFile.mainImages.edges.map((image, index) => (
             <Img
             style={{maxWidth:'700px', width:'110vw', height:'auto', flex:"1 1 50%"}}

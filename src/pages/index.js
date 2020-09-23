@@ -1,16 +1,17 @@
 import React from "react"
 
-import colors from '../components/colors'
+import colors from "../components/colors"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import ScriptLoader from '../components/InstagramFeed/ScriptLoader'
+import ScriptLoader from "../components/InstagramFeed/ScriptLoader"
 
-import Accueil1 from '../components/images/Accueil/Accueil1'
-import Accueil2 from '../components/images/Accueil/Accueil2'
-import Accueil3 from '../components/images/Accueil/Accueil3'
-import Accueil4 from '../components/images/Accueil/Accueil4'
+import Accueil1 from "../components/images/Accueil/Accueil1"
+import Accueil2 from "../components/images/Accueil/Accueil2"
+import Accueil3 from "../components/images/Accueil/Accueil3"
+import Accueil4 from "../components/images/Accueil/Accueil4"
 import TextAndImage from "../components/TextAndImage/TextAndImage"
 import InstagramFeed from "../components/InstagramFeed/InstagramFeed"
+import AccueilCarousel from "../components/Carousel/AccueilCarousel"
 
 const text1 = `Le domaine actuel, formé de la bastide, de la chapelle, du parc et des terres
 agricoles, fut constitué progressivement. Le nom de Salles provient du latin sala qui
@@ -39,7 +40,7 @@ const text3 = `
 A l’époque moderne, la famille Rasque de Laval acheta une grande
 partie du domaine des Salles et engagea la construction d’une bastide
 provençale, probablement dès le XVIe siècle. L’ensemble fut embelli
-par François-Marie Rasque de Laval (1743-1819), maire de Draguignan
+par François-Marie de Rasque de Laval, Premier Consul, maire de Draguignan
 au moment de la Révolution. Ce dernier choisit d’ailleurs d’être
 enterré à la chapelle de Notre-Dame des Salles. Par alliance et par
 succession, la propriété des Salles devait passer ensuite de propriétaires
@@ -52,16 +53,17 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <ScriptLoader />
-    <div style={{ maxWidth: `100vw`, height:'600px' }}>
-      <Accueil1 />
+    <div style={{ height: "auto" }}>
+      {/* <Accueil1 /> */}
+      <AccueilCarousel />
     </div>
-    <div style={{padding:`1rem`, backgroundColor: colors.beige}}>
-      <h2 style={{textAlign:'center', margin:'0', padding:'0'}}>
-      Découvrir le château des Salles, c’est cheminer <br/>
-      à travers l'histoire de la Provence.
+    <div style={{ padding: `1rem`, backgroundColor: colors.beige }}>
+      <h2 style={{ textAlign: "center", margin: "0", padding: "0" }}>
+        Découvrir le château des Salles, c’est cheminer <br />à travers
+        l'histoire de la Provence.
       </h2>
     </div>
-    <TextAndImage text={text1} image={<Accueil2 />}/>
+    <TextAndImage text={text1} image={<Accueil2 />} />
     <TextAndImage text={text2} image={<Accueil3 />} reversed />
     <TextAndImage text={text3} image={<Accueil4 />} />
 

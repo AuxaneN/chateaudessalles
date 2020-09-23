@@ -1,13 +1,44 @@
-import React from 'react'
+import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import SlideShow from './Carousel'
+import SlideShow from "./Carousel"
+import styled from "styled-components"
+import colors from "../colors"
 
-const AccueilCarousel= () => {
+const CarouselWrapper = styled.div`
+  position: relative;
+  height: auto;
+  h1 {
+    position: absolute;
+    top: 10%;
+    width: max-content;
+    max-width: 100vw;
+
+    box-sizing: border-box;
+
+    padding: 20px;
+    padding-left: 10vw;
+
+    background-color: ${colors.beigeLowOpacity};
+    text-align: right;
+    font-weight: bolder;
+    z-index: 98;
+    @media screen AND (max-width: 700px) {
+      padding-left: initial;
+
+      width: 100vw;
+      text-align: center;
+      top: 0;
+    }
+  }
+`
+
+const EvenementsCarousel = () => {
   const allFile = useStaticQuery(
     graphql`
       query {
         mainImages: allFile(
+          sort: { fields: name, order: ASC }
           filter: {
             extension: { regex: "/(jpg)|(png)|(jpeg)/" }
             relativeDirectory: { eq: "Accueil/carrousel" }
@@ -18,25 +49,7 @@ const AccueilCarousel= () => {
               id
               name
               childImageSharp {
-                fluid(maxWidth: 1900) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
-              }
-            }
-          }
-        }
-        thumbnailImages: allFile(
-          filter: {
-            extension: { regex: "/(jpg)|(png)|(jpeg)/" }
-            relativeDirectory: { eq: "Accueil/carrousel" }
-          }
-        ) {
-          edges {
-            node {
-              id
-              name
-              childImageSharp {
-                fluid(maxWidth: 100) {
+                fluid(quality: 90, maxWidth: 2000) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }
@@ -44,27 +57,26 @@ const AccueilCarousel= () => {
           }
         }
       }
-      
-     `
+    `
   )
   return (
-      <SlideShow images={allFile.mainImages.edges.map((image, index) => (
-            <Img
-            style={{maxWidth:'1900px', width:'100vw', height:'auto', maxHeight:'637px'}}
-            key={index}
-              fluid={image.node.childImageSharp.fluid}
-            />
-        ))}  thumbnails={allFile.thumbnailImages.edges.map((image, index) => (
+    <CarouselWrapper>
+      <SlideShow
+        images={allFile.mainImages.edges.map((image, index) => (
           <Img
-          style={{maxWidth:'100px',width:'100px', height:'75px', maxHeight:'100px'}}
-          key={index}
+            style={{
+              maxWidth: "1920px",
+              width: "110vw",
+              height: "auto",
+              maxHeight: "700px",
+            }}
+            key={index}
             fluid={image.node.childImageSharp.fluid}
           />
-      ))}
+        ))}
       />
-  );
-
-  
+    </CarouselWrapper>
+  )
 }
 
-export default AccueilCarousel;
+export default EvenementsCarousel

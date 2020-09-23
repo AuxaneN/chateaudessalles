@@ -7,7 +7,7 @@ const Hist4 = () => {
     query {
       placeholderImage: file(relativePath: { eq: "Histoire/histoire_2.jpg" }) {
         childImageSharp {
-          fluid(quality: 90, maxWidth:1000) {
+          fluid(quality: 90, maxWidth: 1000) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -15,7 +15,12 @@ const Hist4 = () => {
     }
   `)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} alt="Image prise au milieu des champs de vignes."/>
+  return (
+    <Img
+      fluid={data.placeholderImage.childImageSharp.fluid}
+      alt="Image prise au milieu des champs de vignes."
+    />
+  )
 }
 
 export default Hist4

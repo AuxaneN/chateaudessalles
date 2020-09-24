@@ -49,6 +49,11 @@ const InfoWrapper = styled.div`
       flex: 1 1 25%;
     }
   }
+  @media screen AND (max-width: 400px) {
+    h1 {
+      font-size: 2rem;
+    }
+  }
 `
 
 const Infos = () => (
@@ -69,8 +74,9 @@ const Infos = () => (
         Hébergements : Julia +33 6 76 91 37 19
         <br />
         Agriculture : Baptiste +33 6 52 68 87 05
+        <br />
+        chateaudessalles@gmail.com
       </p>
-      <p>chateaudessalles@gmail.com</p>
     </div>
     <div className="item">
       <h1>NOUS SUIVRE</h1>

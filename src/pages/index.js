@@ -53,7 +53,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <ScriptLoader />
-    <div style={{ height: "auto" }}>
+    <div style={{ height: "100", minHeight: "400px" }}>
       {/* <Accueil1 /> */}
       <AccueilCarousel />
     </div>

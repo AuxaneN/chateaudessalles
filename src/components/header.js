@@ -53,7 +53,7 @@ const LinksWrapper = styled.div`
     bottom: 0px;
 
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 
     width: 90vw;
@@ -63,6 +63,9 @@ const LinksWrapper = styled.div`
     font-size: 22px;
     font-weight: bolder;
     line-height: 1.2rem;
+    > * {
+      margin-top: 40px;
+    }
   }
 `
 const Dropdown = styled.div`
@@ -147,16 +150,24 @@ const MobileMenu = styled.div`
   display: block;
   right: 20px;
   top: 20px;
-  z-index: 101;
+  z-index: 102;
 
   cursor: pointer;
+
   span {
     display: block;
     width: 20px;
     height: 3px;
     background-color: white;
     margin: 5px auto;
+    transform: rotate(0deg) translate(0%, 0%);
+    transition: 0.5s;
+    opacity: 1;
   }
+  ${props =>
+    props.isOpen
+      ? "span:nth-child(1) {transition: 0.5s; position: absolute;top: 30%;left: 50%;transform: translate(-50%, -50%) rotate(45deg);}  span:nth-child(2) {transition: 0.5s; position: absolute;top: 30%;left: 50%;transform: translate(-50%, -50%) rotate(-45deg);}  span:nth-child(3) { transition: 0.5s; opacity: 0;}"
+      : ""}
 
   @media screen AND (min-width: 1000px) {
     display: none;
@@ -261,7 +272,7 @@ const Header = ({ siteTitle }) => {
           Contact
         </Link>
       </LinksWrapper>
-      <MobileMenu onClick={clickHandler}>
+      <MobileMenu onClick={clickHandler} isOpen={isOpen}>
         <span></span>
         <span></span>
         <span></span>

@@ -8,6 +8,10 @@ const CuveWrapper = styled.div`
   width: 70vw;
   margin: 40px auto;
   border-left: 1px ${colors.olive} solid;
+  @media screen AND (max-width: 1200px) {
+    width: 100vw;
+    margin: 0px auto;
+  }
   .gatsby-image-wrapper {
     margin: 20px;
   }

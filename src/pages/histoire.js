@@ -62,7 +62,7 @@ const CarteWrapper = styled.div`
     }
   }
   @media screen AND (max-width: 800px) {
-    overflow-x: hidden;
+    overflow: hidden;
     height: 70vh;
     .square {
       height: 100%;

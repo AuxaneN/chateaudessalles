@@ -21,7 +21,7 @@ const SecondPage = () => (
   <Layout>
     <SEO title="Hébergements" />
     <Title title="LES CHAMBRES D’HÔTES" id="chambres" />
-    <ResponsiveWrapper>
+    <ResponsiveWrapper style={{ margin: "0px" }}>
       <SubTitle title="Période XIXe siècle" />
     </ResponsiveWrapper>
     <div className="XIX" style={{ margin: "40px auto" }}>

@@ -7,7 +7,7 @@ const Contact2 = () => {
     query {
       placeholderImage: file(relativePath: { eq: "Contact/contact_3.jpg" }) {
         childImageSharp {
-          fluid(quality: 90, maxWidth:1000) {
+          fluid(quality: 90, maxWidth: 1000) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -15,7 +15,12 @@ const Contact2 = () => {
     }
   `)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} alt="Une camionnette bleu clair est stationnée devant un mur de pierre. A l'arrière de la voiture sont empilées des cagettes de fruits et légumes." />
+  return (
+    <Img
+      fluid={data.placeholderImage.childImageSharp.fluid}
+      alt="Une camionnette bleu clair est stationnée devant un mur de pierre. A l'arrière de la voiture sont empilées des cagettes de fruits et légumes."
+    />
+  )
 }
 
 export default Contact2

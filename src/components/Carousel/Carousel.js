@@ -124,6 +124,7 @@ const SlideShow = ({ images, thumbnails, noArrows }) => {
         value={value}
         onChange={onChange}
         plugins={[
+          "fastSwipe",
           {
             resolve: slidesToShowPlugin,
             options: {
@@ -132,6 +133,7 @@ const SlideShow = ({ images, thumbnails, noArrows }) => {
           },
         ]}
         arrows
+        keepDirectionWhenDragging
         centered
         itemWidth={1940}
         offset={45}

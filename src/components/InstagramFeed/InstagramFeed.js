@@ -98,15 +98,6 @@ const ArrowRight = styled.div`
 const InstagramFeed = () => {
   const [images, setImages] = useState([{ url: "", id: 1 }])
 
-  let instagramFeed = document.querySelector(".instagramfeed")
-
-  const scrollLeft = el => {
-    instagramFeed.scrollLeft -= 300
-  }
-  const scrollRight = el => {
-    instagramFeed.scrollLeft += 300
-  }
-
   useEffect(() => {
     const getImages = async () => {
       const tokenURL = "https://chateaudessalles-token.herokuapp.com/token.json"
@@ -127,9 +118,16 @@ const InstagramFeed = () => {
         .catch(error => console.log(error))
     }
     getImages()
-    let instagramFeed = document.querySelector(".instagramfeed")
   }, [])
 
+  const scrollLeft = el => {
+    let instagramFeed = document.querySelector(".instagramfeed")
+    instagramFeed.scrollLeft -= 300
+  }
+  const scrollRight = el => {
+    let instagramFeed = document.querySelector(".instagramfeed")
+    instagramFeed.scrollLeft += 300
+  }
   return (
     <SectionWrapper
       style={{

@@ -52,7 +52,7 @@ et la famille Rhodius au XXIe siècle.
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <ScriptLoader />
+    {/* <ScriptLoader /> */}
     <div style={{ height: "100", minHeight: "400px" }}>
       {/* <Accueil1 /> */}
       <AccueilCarousel />

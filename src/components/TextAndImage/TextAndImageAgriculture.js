@@ -35,12 +35,20 @@ const TextAndImageWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     flex: 1 1 30em;
-
+    span {
+      position: absolute;
+      width: 1px;
+      right: 0px;
+      height: 200px;
+      background-color: ${colors.olive};
+      content: " ";
+      z-index: 2;
+    }
     h2 {
       color: ${colors.olive};
       align-self: center;
       position: absolute;
-
+      text-align: left;
       top: 10px;
       left: 40px;
       ${props =>
@@ -81,6 +89,7 @@ const TextAndImageWrapper = styled.div`
         position: initial;
         text-align: center;
       }
+
       position: inherit;
       order: 2;
       left: 0;
@@ -99,6 +108,7 @@ const TextAndImageAgriculture = props => (
     <div className="text">
       <h2>{props.title}</h2>
       <p>{props.texte}</p>
+      {props.barre ? <span></span> : ""}
     </div>
     <div className="image">{props.image}</div>
   </TextAndImageWrapper>

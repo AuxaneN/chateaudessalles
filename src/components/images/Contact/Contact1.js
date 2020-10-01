@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 const Contact1 = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "Contact/contact_0.png" }) {
+      placeholderImage: file(relativePath: { eq: "Contact/contact_0.jpg" }) {
         childImageSharp {
           fluid(quality: 90, maxWidth: 1000) {
             ...GatsbyImageSharpFluid_withWebp

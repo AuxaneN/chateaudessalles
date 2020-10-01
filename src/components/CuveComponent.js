@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import colors from "./colors"
-import Event3 from "./images/Evenements/Event3"
+// import Event3 from "./images/Evenements/Event3"
 import EvenementTexteAdditionnel from "./EvenementTexteAdditionnel/EvenementTexteAdditionnel"
 import CarouselCuve from "./Carousel/CarouselCuve"
 const CuveWrapper = styled.div`

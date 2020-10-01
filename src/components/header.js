@@ -173,11 +173,6 @@ const MobileMenu = styled.div`
     display: none;
   }
 `
-const linkStyle = {
-  color: colors.olive,
-  textDecoration: "none",
-}
-
 const Header = ({ siteTitle }) => {
   //open and close mobile menu
   const [isOpen, setIsOpen] = useState(false)

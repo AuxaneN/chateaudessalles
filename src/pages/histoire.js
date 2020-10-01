@@ -171,7 +171,7 @@ const SecondPage = () => (
           </div>
         </>
       }
-      title="LE CHATEAU"
+      title="LE CHÂTEAU"
       image={<Hist1 />}
       imageFlex="2 1 70%;"
     />

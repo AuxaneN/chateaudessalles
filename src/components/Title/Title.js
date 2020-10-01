@@ -8,7 +8,6 @@ const TitleWrapper = styled.div`
   box-sizing: content-box;
   max-width: 100vw;
   width: 100%;
-  height: 100px;
   margin: 40px auto;
   padding: 20px 0px;
 
@@ -28,6 +27,11 @@ const TitleWrapper = styled.div`
   h1,
   img {
     margin: 0px;
+  }
+  @media screen AND (max-width: 1000px) {
+    h1 {
+      text-align: center;
+    }
   }
 `
 

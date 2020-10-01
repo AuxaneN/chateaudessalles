@@ -17,7 +17,7 @@ const HotesWrapper = styled.div`
   /* height: 300px; */
   color: ${colors.olive};
   > * {
-    flex: 1 1 20%;
+    flex: 1 0 20%;
     margin: 10px;
   }
   > *:nth-child(3) {
